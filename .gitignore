@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+
+# Environments
+.env
+.venv
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Model Checkpoints (19GB+)
+checkpoints/
+
+# Results (3.2GB)
+results/
+
+# Data (317MB)
+data/
+
+# Logs
+logs/
+**/bertlogs/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Training artifacts
+*.pth
+*.pt
+*.onnx
+*.bin
+*.safetensors
