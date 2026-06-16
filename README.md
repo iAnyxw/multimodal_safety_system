@@ -3,8 +3,8 @@
 > 覆盖文本、图像、音频三种模态的统一安全审核引擎，支持多模态融合判定与可解释风险输出。
 
 - **仓库地址**：https://github.com/yourname/multimodal_safety_system
-- **作者**：XXX
-- **邮箱**：xxx@example.com
+- **作者**：汪紫懿，陈雨霏
+- **邮箱**：wangziyi451598429@gmail.com
 
 ---
 
@@ -133,9 +133,11 @@ class Settings(BaseSettings):
 
 | 数据集名称 | 来源 | 大小 | 格式 | 说明 |
 |-----------|------|------|------|------|
-| 中文文本安全审核数据集 | 自建 | 5,396 条 | CSV | 训练数据，含 insult/obscene/identity_hate 三标签 |
-| 图像测试集 | 自标注 | 206 张 | JPG/PNG | 图片审核评估（Safe 100 张 / Unsafe 106 张） |
-| 对抗文本测试集 | 手工构造 | 52 条 | Python 内联 | 5 类对抗样本鲁棒性测试 |
+| 中文文本安全审核数据集 | 自建 （通过网盘分享的文件：ch_data.csv
+链接: https://pan.baidu.com/s/1gY94e897mSucHkOGM8RU8w?pwd=pghx 提取码: pghx 
+--来自百度网盘超级会员v3的分享）| 5,396 条 | CSV | 训练数据，含 insult/obscene/identity_hate 三标签 |
+| 图像测试集 | 自标注，不开源 | 206 张 | JPG/PNG | 图片审核评估（Safe 100 张 / Unsafe 106 张） |
+| 对抗文本测试集 | 手工构造，不开源 | 52 条 | Python 内联 | 5 类对抗样本鲁棒性测试 |
 
 > **中文文本数据集字段说明**：
 
@@ -169,7 +171,6 @@ class Settings(BaseSettings):
 | 模型 | 下载位置 | 目标路径 | 说明 |
 |------|---------|----------|------|
 | XLM-R（中文 3 标签） | 脚本 `scripts/train_ch_text.py` 训练产出 | `checkpoints/xlmr_ch/` | 中文文本审核模型 |
-| XLM-R（英文 6 标签） | HuggingFace `unitary/toxic-bert` 或自行训练 | `checkpoints/xlmr/` | 英文文本审核模型 |
 | CLIP-ViT-Base-Patch32 | HuggingFace 自动缓存 | `~/.cache/huggingface/` | 图像初筛模型 |
 | Qwen2-VL-2B-Instruct | HuggingFace `Qwen/Qwen2-VL-2B-Instruct` | `checkpoints/Qwen2-VL-2B-Instruct/` | VLM 深度审核模型 |
 
@@ -372,12 +373,7 @@ multimodal_safety_system/
 | Qwen 触发率 | 43.7%（仅疑图） |
 | 总耗时（206 张） | 39.4s |
 
-### 对抗防御
 
-| 指标 | 原始模型 | + Guard |
-|------|---------|---------|
-| Unsafe 召回率 | 100% | **100%** ✅ |
-| Safe 误拦→REVIEW | 0% | **50%** ✅ |
 
 ---
 
@@ -387,10 +383,10 @@ multimodal_safety_system/
 
 ```bibtex
 @software{multimodal_safety_system,
-  author = {Your Name},
+  author = {iAnyxw},
   title = {Multimodal Safety System},
   year = {2026},
-  url = {https://github.com/yourname/multimodal_safety_system}
+  url = {[https://github.com/yourname/multimodal_safety_system](https://github.com/iAnyxw/multimodal_safety_system)}
 }
 ```
 
